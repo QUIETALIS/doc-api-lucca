@@ -20,6 +20,10 @@ paths:
       - Les liens API Lucca
       summary: Liste des collaborateurs
       description: |-
+        Les liens sont tous sous la forme : https://quietalis.ilucca.net/api/v3/...
+        
+        Cette documentation est interactive, cliquez sur Try it out sous chaque URL, ajoutez la clé API (lucca application=123xxx...) pour obtenir la **Request URL** complète afin de l'utiliser dans PowerBI.
+        
         Sur PowerBI :
 
         Rajouter dans les **Headers** une valeur **Authorization** avec pour valeur :
