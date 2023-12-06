@@ -2,13 +2,13 @@ openapi: 3.0.0
 info:
   title: LUCCA
   description: "Les liens sont tous sous la forme : https://quietalis.ilucca.net/api/v3/...\n\
-        
-        Cette documentation est interactive, cliquez sur Try it out sous chaque URL, ajoutez la clé API (lucca application=123xxx...) pour obtenir la **Request URL** complète afin de l'utiliser dans PowerBI.\n\
-        
-        Sur PowerBI :\n\n1. Fichier > Obtenir les données > Web > Avancé\n\
-    2. Copier coller l'URL qui vous intéresse (voir ci-dessous les disponibilités)\n\
-    3. Rajouter dans les **Headers** une clé **Authorization** avec pour valeur :\n\
-    \    \n    1. **lucca application=SECRET**\n        \n\n<img src=\"https://content.pstmn.io/797097ae-ae37-4f91-b15a-0fa9889b7e3a/aW1hZ2UucG5n\"\
+    \n\nCette documentation est interactive, cliquez sur Try it out sous chaque URL,\
+    \ ajoutez la clé API (lucca application=123xxx...) pour obtenir la **Request URL**\
+    \ complète afin de l'utiliser dans PowerBI.\n\n\nSur PowerBI :\n\n1. Fichier >\
+    \ Obtenir les données > Web > Avancé\n2. Copier coller l'URL qui vous intéresse\
+    \ (voir ci-dessous les disponibilités)\n3. Rajouter dans les **Headers** une clé\
+    \ **Authorization** avec pour valeur :\n    \n    1. **lucca application=SECRET**\n\
+    \        \n\n<img src=\"https://content.pstmn.io/797097ae-ae37-4f91-b15a-0fa9889b7e3a/aW1hZ2UucG5n\"\
     \ width=\"806\" height=\"493\">"
   version: 1.0.0
 servers:
@@ -161,4 +161,5 @@ paths:
           content:
             application/json: {}
       x-swagger-router-controller: LesLiensAPILucca
-components: {}
+components:
+  schemas: {}
