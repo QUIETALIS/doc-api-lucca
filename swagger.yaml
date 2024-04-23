@@ -116,36 +116,84 @@ paths:
   /api/v3/expenseClaimItems:
     get:
       tags:
-      - Les liens API Lucca
+        - Les liens API Lucca
       summary: Dtails d'une note de frais
       operationId: apiV3ExpenseClaimItemsGET
       parameters:
-      - name: Authorization
-        in: header
-        required: false
-        style: simple
-        explode: false
-        schema:
-          type: string
-        example: "{{Lucca API Key}}"
-      - name: expenseclaimid
-        in: query
-        description: "equals,id"
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: string
-        example: "equals,8018"
-      - name: fields
-        in: query
-        description: Ce paramètre contient tous les champs disponibles de Lucca
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: string
-        example: "expenseclaimid,expenseclaim,linenumber,iscontrolled,owner,ownerid,paymentmethodid,name,expenseitemlifecycletrackerid,merchant,sourceid,source,expensenature,billable,customfields,axissections,comment,createdon,author,quantity,effectivequantity"
+        - name: Authorization
+          in: header
+          required: false
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: "{{Lucca API Key}}"
+        - name: expenseclaimid
+          in: query
+          description: "equals,id"
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+          example: "equals,8018"
+        - name: fields
+          in: query
+          description: Ce paramètre contient tous les champs disponibles de Lucca
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+          example: "expenseclaimid,expenseclaim,linenumber,iscontrolled,owner,ownerid,paymentmethodid,name,expenseitemlifecycletrackerid,merchant,sourceid,source,expensenature,billable,customfields,axissections,comment,createdon,author,quantity,effectivequantity"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+      x-swagger-router-controller: LesLiensAPILucca
+  /api/v3/leaves:
+    get:
+      tags:
+        - Les liens API Lucca
+      summary: Liste des absences
+      operationId: apiV3LeavesGET
+      parameters:
+        - name: Authorization
+          in: header
+          required: false
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: "{{Lucca API Key}}"
+        - name: leavePeriod.ownerId
+          in: query
+          description: "equals,id"
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+          example: "equals,5"
+        - name: date
+          in: query
+          description: "since,date // date // until,date // between,date1,date2"
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+          example: "equals,2021-01-01"
+        - name: fields
+          in: query
+          description: Ce paramètre contient tous les champs disponibles de Lucca
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+          example: "leaveAccount, leaveAccountId, leavePeriodId, leavePeriod, value, isActive, creationDate, cancellationUserId, comment, isAm"
       responses:
         "200":
           description: Successful response
